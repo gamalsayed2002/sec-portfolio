@@ -1,0 +1,35 @@
+footer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 0 10px 30px 10px;
+}
+footer ul {
+  display: flex;
+  max-width: 100%;
+  gap: 10px;
+}
+footer ul li {
+}
+footer ul li a {
+  color: var(--subtitle);
+  font-size: 1.2rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+footer ul li a.icon {
+  font-size: 1.8rem;
+  color: var(--subtitle);
+}
+footer ul li a:hover {
+  color: var(--blue);
+}
+@media (max-width: 450px) {
+  footer ul li a {
+    font-size: 0.7rem;
+  }
+  footer ul li a.icon {
+  }
+}

@@ -1,0 +1,138 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 1.2rem;
+}
+header nav {
+  background: var(--bgHeader);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  box-shadow: 1px 1px 2px #2323242a;
+  transition: .5s all ease-in-out;
+}
+header nav ul {
+  display: flex;
+  gap: 16px;
+}
+header nav ul li {
+}
+header nav ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: 0.5s;
+}
+header nav ul li a:hover {
+  opacity: 1;
+  font-size: 0.9rem;
+  color: var(--blue);
+}
+header button {
+  font-size: 1.2rem;
+}
+header .menu {
+  display: none !important;
+}
+
+/* fixed nav */
+header .fixed {
+  position: fixed;
+  inset: 0;
+  background: rgb(40, 40, 48, 0.91);
+  backdrop-filter: blur(4px);
+}
+header .fixed ul {
+  width: 85%;
+  margin: 2rem auto 0 auto;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+  transition: 0.5s all ease-in-out;
+  animation: scale 0.8s 1;
+}
+header .fixed ul li {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.77rem;
+  padding-top: 0.5rem;
+}
+header .fixed ul li:first-child {
+  text-align: right;
+  border: none;
+  padding-bottom: 0;
+  padding-top: 0.5rem;
+}
+header .fixed ul li:last-child {
+  border: none;
+}
+header .fixed ul li a {
+  color: var(--title);
+  font-size: 1rem;
+}
+/* start animation for modal nav  */
+@keyframes scale {
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/* icons style */
+header .icon-moon-o {
+  background-color: var(--bgHeader);
+  height: 2.4rem;
+  width: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--subtitle);
+  border: 1px solid rgba(244, 465, 96, 0.249);
+  text-align: center;
+  transition: 0.5s all ease-in-out;
+}
+header .icon-menu {
+  background-color: var(--bgHeader);
+  height: 2.4rem;
+  width: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--subtitle);
+  border: 1px solid rgba(244, 465, 96, 0.249);
+  transition: 0.5s all ease-in-out;
+}
+header .icon-moon-o:hover {
+  color: var(--title);
+  border: 1px solid rgba(244, 165, 96);
+}
+header .icon-menu:hover {
+  color: var(--title);
+  border: 1px solid rgba(244, 165, 96);
+}
+header .icon-clear {
+  font-size: 2rem;
+  font-weight: 900;
+  color: crimson;
+  margin-bottom: 1rem;
+  transition: 0.5s all ease-in-out;
+}
+
+/* start media */
+@media (max-width: 700px) {
+  header nav {
+    display: none;
+  }
+  header .menu {
+    display: block !important;
+  }
+}
